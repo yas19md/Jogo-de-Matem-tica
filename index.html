@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jogo de Matemática</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1> Jogo de Matemática</h1>
+
+<div id="menu">
+    <p>Escolha o nível:</p>
+    <button onclick="startGame('facil')">Fácil</button>
+    <button onclick="startGame('medio')">Médio</button>
+    <button onclick="startGame('dificil')">Difícil</button>
+</div>
+
+<div id="game" class="hidden game-box">
+    <h2 id="question"></h2>
+    <div id="options"></div>
+
+    <div class="info">
+        ❤️ Vidas: <span id="lives"></span> |
+        ⭐ Pontos: <span id="score"></span>
+    </div>
+</div>
+
+<div id="gameOver" class="hidden">
+    <h2>💀 Game Over</h2>
+    <p>Pontuação: <span id="finalScore"></span></p>
+
+    <input type="text" id="playerName" placeholder="Seu nome">
+    <br>
+    <button onclick="saveScore()">Salvar Pontuação</button>
+    <button onclick="restart()">Jogar Novamente</button>
+</div>
+
+<div id="ranking">
+    <h3>🏆 Ranking</h3>
+    <ul id="rankingList"></ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
